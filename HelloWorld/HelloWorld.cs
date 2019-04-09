@@ -43,6 +43,9 @@ namespace HelloWorld
             String job = "Ikea food";
             String favoriteBand = "AJR";
             String favoriteSportsTeam = "Cubs";
+
+
+            Console.WriteLine("Hi! my name is "+ firstName+ " "+ lastName+" I am " + age + " years old. I work at "+ job + ". My favorite band is "+ favoriteBand+ ". My favorite sport is the Chicago "+ favoriteSportsTeam+ ".");
         }
     }
 }
