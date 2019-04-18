@@ -32,17 +32,43 @@ namespace TicTacToe
             int row = int.Parse(Console.ReadLine());
             Console.WriteLine("Enter Column:");
             int column = int.Parse(Console.ReadLine());
+            PlaceMark();
         }
 
-        public static void PlaceMark(int row, int column)
+        public static void PlaceMark()
         {
         // your code goes here
 
         //grabs the position from user input and places the x or o in the correct space
             GetInput();
+            DrawBoard();
+            
 
-            // board = board[row][column];
-        
+            if(row = 0){
+                if(column = 0){
+                    board[0][0] = playerTurn;
+                }else if(column=1){
+                    board[0][1] = playerTurn;
+                }else{
+                    board[0][2] = playerTurn;
+                }
+            }else if(row = 1){
+                if(column = 0){
+                    board[1][0] = playerTurn;
+                }else if(column=1){
+                    board[1][1] = playerTurn;
+                }else{
+                    board[1][2] = playerTurn;
+                }
+            }else if(row=2){
+                if(column = 0){
+                    board[2][0] = playerTurn;
+                }else if(column=1){
+                    board[2][1] = playerTurn;
+                }else{
+                    board[2][2] = playerTurn;
+                }
+            }
         }
 
         public static bool CheckForWin()
@@ -71,9 +97,14 @@ namespace TicTacToe
         {
             // your code goes here
 
+            // if(){
+            //     return true;
+            // }else{
+                return false;
+            
+
             // get input can't take anymore input return true
             
-            return false;
         }
         
         public static bool HorizontalWin()
@@ -107,14 +138,14 @@ namespace TicTacToe
             // 0:2 , 1:2 , 2:2
 
             if(board[0][0] == board[1][0] && board[1][0] == board[2][0]){
-            return true;
-        }else if(board[0][01] == board[1][1] && board[1][1] == board[2][1]){
-            return true;
-        }else if(board[0][2] == board[2][1] && board[1][2] == board[2][2]){
-            return true;
-        }else{
-            return false;
-        }
+                return true;
+            }else if(board[0][01] == board[1][1] && board[1][1] == board[2][1]){
+                return true;
+            }else if(board[0][2] == board[2][1] && board[1][2] == board[2][2]){
+                return true;
+            }else{
+                return false;
+            }
         }
 
         public static bool DiagonalWin()
