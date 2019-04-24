@@ -3,7 +3,8 @@
 *.exe
 bin
 obj
-
+.vs
+.vscode
 # OS generated files #
 ######################
 .DS_Store
