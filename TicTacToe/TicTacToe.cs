@@ -4,7 +4,7 @@ namespace TicTacToe
 {
     class Program
     {
-        public static string playerTurn = "X";
+        public static string playerTurn = "";
         public static string[][] board = new string[][]
         {
             new string[] {" ", " ", " "},
@@ -37,18 +37,36 @@ namespace TicTacToe
         public static void PlaceMark(int row, int column)
         {
         // your code goes here
+
+        //grabs the position from user input and places the x or o in the correct space
+
+        
         }
 
         public static bool CheckForWin()
         {
             // your code goes here
 
-            return false;
+            if (HorizontalWin = true)
+            {
+                return true;
+            }else if ( VerticalWin = true){
+                return true;
+            }else if (DiagonalWin = true){
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
         }
 
         public static bool CheckForTie()
         {
             // your code goes here
+
+            // get input can't take anymore input return true
 
             return false;
         }
@@ -57,12 +75,31 @@ namespace TicTacToe
         {
         // your code goes here
 
-        return false;
+        // 0: 0,1,2
+        // 1: 0,1,2
+        // 2: 0,1,2
+
+        if(board[0][0] == board[0][1] && board[0][1] == board[0][2]){
+            return true;
+        }else if(board[1][0] == board[1][1] && board[1][1] == board[1][2]){
+            return true;
+        }else if(board[2][0] == board[2][1] && board[2][1] == board[2][2]){
+            return true;
+        }else{
+            return false;
+        }
+        
+
+        
         }
 
         public static bool VerticalWin()
         {
             // your code goes here
+
+            // 0:0 , 1:0 , 2:0
+            // 0:1 , 1:1 , 2:1
+            // 0:2 , 1:2 , 2:2
 
             return false;
         }
@@ -70,6 +107,9 @@ namespace TicTacToe
         public static bool DiagonalWin()
         {
             // your code goes here
+
+            // 0:0 , 1:1 , 2:2
+            // 0:2 , 1:1 , 2:0
 
             return false;
         }
