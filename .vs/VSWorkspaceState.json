@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\ListChall"
+    "\\ListChall",
+    "\\RockPaperScissors"
   ],
-  "SelectedNode": "\\ListChall\\Program.cs",
+  "SelectedNode": "\\RockPaperScissors\\RockPaperScissors.cs",
   "PreviewInSolutionExplorer": true
 }
