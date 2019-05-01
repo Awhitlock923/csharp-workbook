@@ -7,7 +7,7 @@ namespace program4
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-
+            //generates a random number for the computer
             Random rnd = new Random();
             int num = rnd.Next(0,10);
             
@@ -18,7 +18,7 @@ namespace program4
             Console.WriteLine(num);
             
 
-
+            //loops three times to check to see if you can guess the computers random number
             while( x > 0){
                 Console.Write("Guess the number:");
                 input = Console.ReadLine();

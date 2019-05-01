@@ -16,7 +16,9 @@ namespace Checkpoint1
             
             int i = 1;
 
+            //runs loop if the number is less than 101
             while( i < 101){
+                //checks numbers if they are divisible by three
                 if(i % three == 0){
                     Console.WriteLine("yes");
                     count++;
