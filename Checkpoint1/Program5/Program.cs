@@ -7,7 +7,7 @@ namespace Program5
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            int max = 0;
 
             Console.WriteLine("Enter numbers: ");
 
@@ -21,7 +21,13 @@ namespace Program5
                 nums.Add(oneNum);
             }
 
-            Console.WriteLine(nums);
+            for(int i = 0; i < arr.Length; i++){
+                
+                if(max < nums[i]){
+                    max = nums[i];
+                }
+            }
+            Console.WriteLine("The largest number is "+max);
         }
     }
 }

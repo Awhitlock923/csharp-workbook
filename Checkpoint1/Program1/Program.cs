@@ -7,7 +7,6 @@ namespace Checkpoint1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
 
             int count = 0;
             int three = 3;

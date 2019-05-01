@@ -12,26 +12,30 @@ namespace Program2
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
             int num;
             int sum = 0;
             string input;
 
-            Console.Write("Type out your numbers and type ok when finished");
+            Console.WriteLine("Type out your numbers and type ok when finished");
 
-            foreach(){
+            
                 Console.Write("User input: ");
                 input= Console.ReadLine();
 
-                if(input == "ok"){
-                    Console.WriteLine("your numbers add up to be: ");
-                }else{
-                    num = Convert.ToInt32(input);
+               while(input != "ok" || input != "OK"){
+                
+                num = Convert.ToInt32(input);
 
-                    sum = num + sum;
-                }
+                sum = num + sum;
 
-            }
+                Console.Write("User input: ");
+                input= Console.ReadLine();
+
+               }
+
+               Console.WriteLine("The sum of your numbers is: " + sum);
+
+            
 
 
             

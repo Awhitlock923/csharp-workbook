@@ -6,7 +6,6 @@ namespace program4
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
 
             Random rnd = new Random();
             int num = rnd.Next(0,10);
