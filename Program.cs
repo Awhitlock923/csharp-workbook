@@ -1,14 +1,12 @@
 ﻿using System;
 
-namespace Checkpoint1
+namespace csharp_workbook
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!"); 
-
-
+            Console.WriteLine("Hello World!");
         }
     }
 }
