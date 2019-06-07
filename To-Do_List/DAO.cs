@@ -40,7 +40,7 @@ namespace To_Do_List {
             }
             context.SaveChanges();
         }
-
+//deletes an item
         public void delete(int id) {
             context.items.Remove(context.items.Find(id));
             context.SaveChanges();
