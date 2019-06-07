@@ -29,14 +29,20 @@ namespace To_Do_List {
             context.SaveChanges();
         }
 
-        public void update(Items i){
-            context.items.Find(ItemsID);
-            context.ItemsID.status = Status.Completed;
+        public void update(int id){
+            foreach(Items i in context.items)
+            {
+                if(i.status == Status.Incomplete){
+                    i.status = Status.Complete;
+                }else{
+                    continue;
+                }
+            }
             context.SaveChanges();
         }
 
-        public void delete() {
-            context.items.Remove(context.items.Find(idRemove);
+        public void delete(int id) {
+            context.items.Remove(context.items.Find(id));
             context.SaveChanges();
         }
 

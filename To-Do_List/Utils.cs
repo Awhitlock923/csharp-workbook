@@ -15,9 +15,20 @@ namespace To_Do_List {
             Console.WriteLine("Type DONE to finish and exit.");
         }
 
+        public string Error = "Invalid entry.";
+
         public string getInput(){
             string getInput = Console.ReadLine();
+            // if(getInput == "1" || getInput == "2" || getInput == "3" || getInput == "4" || getInput == "5" || getInput == "DONE"){
+            // return getInput;
+            // }else{
+            //     return Error;
+            // }
             return getInput;
+        }
+
+        public void emessage(){
+            Console.WriteLine("Invalid entry.");
         }
 
 
@@ -25,15 +36,16 @@ namespace To_Do_List {
             Console.WriteLine("Enter the item name.");
         }
 
-        public void selectID(){
+        public int selectID(){
             Console.WriteLine("Enter ID of item you want to change the status to.");
-            int ItemsID = Convert.ToInt32(Console.ReadLine());
+            int ID = Convert.ToInt32(Console.ReadLine());
+            return ID;
         }
 
 
         public void deleteMessage(){
             Console.WriteLine("Enter the ID number of your item.");
-            int idRemove = Convert.ToInt32(Console.ReadLine()));
+            int ID = Convert.ToInt32(Console.ReadLine());
         }
 
         public void endMessage(){

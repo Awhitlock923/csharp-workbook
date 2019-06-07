@@ -5,9 +5,9 @@ namespace To_Do_List
 {
     public class Items
     {
-        public int id {get; private set;}
-        public string name {get; private set;}
-        public Status status {get; private set;}
+        public int id {get;private set;}
+        public string name {get; set;}
+        public Status status {get; set;}
 
             public Items()
             {

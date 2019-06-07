@@ -19,15 +19,15 @@ namespace To_Do_List {
 
         public void start () {
             Utils.printStart ();
-            String input = utils.getInput ();
-            if (input == "y") {
+            string input = utils.getInput().ToUpper();
+            if(input == "Y") {
                 while (input != "DONE") {
                     Utils.printMenu ();
-                    input = utils.getInput ();
+                    input = utils.getInput().ToUpper();
                     if (input == "1") {
                         Console.WriteLine ("Do you want to add a new item? (y) or (n)");
-                        string answer = Console.ReadLine ();
-                        if (answer == "y") {
+                        string answer = Console.ReadLine().ToUpper();
+                        if (answer == "Y") {
                             processAdd ();
                         } else {
                             input = null;
@@ -38,8 +38,8 @@ namespace To_Do_List {
                         processChange ();
                     } else if (input == "3") {
                         Console.WriteLine ("Do you want to delete an item? (y) or (n)");
-                        string answer = Console.ReadLine ();
-                        if (answer == "y") {
+                        string answer = Console.ReadLine().ToUpper();
+                        if (answer == "Y") {
                             processDelete ();
                         } else {
                             input = null;
@@ -52,8 +52,9 @@ namespace To_Do_List {
                     }
 
                 }
-            } else {
-                utils.endMessage ();
+            
+            }else{
+                utils.endMessage();
             }
 
         }
@@ -74,15 +75,16 @@ namespace To_Do_List {
             Console.WriteLine(i.id+" | "+ i.name+" | " + i.status);
             }
             utils.selectID();
-            
-            dao.update();
+            int id = utils.selectID();
+            dao.update(id);
             
         }
 
         public void processDelete () {
             dao.listItems();
-            utils.deleteMessage ();
-            dao.delete();
+            utils.deleteMessage();
+            int id = utils.selectID();
+            dao.delete(id);
             foreach(Items i in dao.listItems())
             {
             Console.WriteLine(i.id+" | "+ i.name+" | " + i.status);
