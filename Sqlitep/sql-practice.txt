@@ -1,0 +1,45 @@
+$ sqlite3 Practice.db
+SQLite version 3.27.2 2019-02-25 16:06:06
+Enter ".help" for usage hints.
+sqlite> create database Practice.db
+   ...> ;
+Error: near "database": syntax error
+sqlite> create table dogs (id int, type varchar, size varchar);
+sqlite> .header on
+sqlite> .mode column
+sqlite> select * from dogs
+   ...> ;
+sqlite> insert into dogs (1, husky, large);
+Error: near "1": syntax error
+sqlite> select * from dogs
+   ...> set id = 1;
+Error: near "set": syntax error
+sqlite> insert into dogs value(1, husky, large)
+   ...> ;
+Error: near "value": syntax error
+sqlite> sqlite> insert into dogs values(1, husky, large)
+   ...> ;
+Error: near "sqlite": syntax error
+sqlite> insert into dogs values(1, husky, large);
+Error: no such column: husky
+sqlite> insert into dogs values(id, type, size)
+   ...> (1, husky, large);
+Error: near "(": syntax error
+sqlite> insert into dogs values(1, 'husky', 'large');
+sqlite> insert into dogs values(1, 'chihuahua', 'small');
+sqlite> insert into dogs values(1, 'border collie', 'medium');
+sqlite> update dogs where type = chihuahua
+   ...> set id = 2;
+Error: near "where": syntax error
+sqlite> update dogs set id =2 where type = chihuahua;
+Error: no such column: chihuahua
+sqlite> update dogs set id = 2 where type = 'chihuahua';
+sqlite> update dogs set id = 3 where size = 'medium';
+sqlite> insert into dogs values(4, 'lizard' , 'small');
+sqlite> delete from dogs where type = 'lizard';
+sqlite> select * from dogs;
+id          type        size
+----------  ----------  ----------
+1           husky       large
+2           chihuahua   small
+3           border col  medium
