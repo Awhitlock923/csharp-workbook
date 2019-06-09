@@ -32,8 +32,8 @@ namespace To_Do_List {
         public void update(int id){
             foreach(Items i in context.items)
             {
-                if(i.status == Status.Incomplete){
-                    i.status = Status.Complete;
+                if(i.id == id){
+                      i.status = Status.Complete;
                 }else{
                     continue;
                 }

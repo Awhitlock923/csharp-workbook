@@ -74,7 +74,6 @@ namespace To_Do_List {
             {
             Console.WriteLine(i.id+" | "+ i.name+" | " + i.status);
             }
-            utils.selectID();
             int id = utils.selectID();
             dao.update(id);
             
