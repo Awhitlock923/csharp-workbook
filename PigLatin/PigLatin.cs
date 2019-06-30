@@ -58,9 +58,3 @@ namespace FunctionTest
             
                 // leave this command at the end so your program does not close automatically
     }
-
-        
-
-        
-
-
